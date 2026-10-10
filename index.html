@@ -60,21 +60,22 @@ section{padding:65px 18px;max-width:900px;margin:auto}
   max-width:650px
 }
 .gallery{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:12px;margin-top:25px
+display:flex;
+flex-direction:column;
+gap:0;
+margin-top:25px;
 }
 .gallery img{
-  width:100%;height:210px;object-fit: contain;
-background: #111;
-  border-radius:12px;border:1px solid #98763e
+display:block;
+width:100%;
+height:100vh;
+object-fit:contain;
+background:#111;
+border:0;
+border-radius:0;
 }
-.gallery img:first-child{grid-column:span 2;height:270px}
-footer{padding:30px;color:#b9a987;font-size:13px}
-#surprise{display:none;color:#f8d994;font-size:20px}
-canvas{position:fixed;inset:0;pointer-events:none;z-index:5}
-@media(max-width:420px){
-  .gallery img{height:160px}
-  .gallery img:first-child{height:210px}
+.gallery img:first-child{
+height:100vh;
 }
 </style>
 </head>
