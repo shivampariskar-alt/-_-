@@ -1,226 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>𝐇𝐚𝐩𝐩𝐢𝐞𝐬𝐭 𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 𝐃𝐞𝐚𝐫 𝐒𝐚𝐧𝐢𝐤𝐚🎂❤️ </title>
+<meta name="theme-color" content="#090014">
+<title>Happy Birthday Sanika 💜</title>
 <style>
+:root{--pink:#ff4fc8;--purple:#a855f7;--gold:#ffe8a3;--cyan:#78f7ff}
 *{box-sizing:border-box}
-body{
-  margin:0;color:#fff5dc;
-  background:#090909;
-  font-family:Georgia,serif;
-  text-align:center;overflow-x:hidden
-}
-#stars{
-  position:fixed;inset:0;pointer-events:none;
-  z-index:0;overflow:hidden
-}
-.star{
-  position:absolute;color:#e8bd69;
-  animation:float linear infinite;
-  opacity:.7
-}
-@keyframes float{
-  from{transform:translateY(105vh) rotate(0deg)}
-  to{transform:translateY(-15vh) rotate(360deg)}
-}
-main{position:relative;z-index:1}
-.hero{
-  min-height:95vh;display:flex;
-  flex-direction:column;justify-content:center;
-  align-items:center;padding:35px 20px;
-  background:radial-gradient(ellipse at center,
-  #352512 0%,#14100b 42%,#090909 78%)
-}
-.small{
-  color:#d8b56b;letter-spacing:4px;
-  font:12px Arial,sans-serif
-}
-h1{
-  font-size:clamp(42px,12vw,76px);
-  margin:22px 0;color:#f7d995;
-  text-shadow:0 0 25px #bb873f66
-}
-h2{color:#edcc84;font-size:30px}
-p{line-height:1.8;color:#e0d5c0}
-button{
-  padding:14px 23px;border:1px solid #e8c77c;
-  border-radius:30px;background:#c69b4b;
-  color:#100d07;font-weight:bold;
-  font-size:14px;cursor:pointer;margin:10px
-}
-button:hover{background:#ffe5a2}
-section{padding:65px 18px;max-width:900px;margin:auto}
-.card{
-  border:1px solid #8f713c;
-  background:#ffffff08;border-radius:18px;
-  padding:25px;margin:20px auto;
-  max-width:650px
-}
-.gallery{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:12px;margin-top:25px
-}
-.gallery img{
-  width:100%;height:210px;object-fit: contain;
-background: #111;
-  border-radius:12px;border:1px solid #98763e
-}
-.gallery img:first-child{grid-column:span 2;height:270px}
-footer{padding:30px;color:#b9a987;font-size:13px}
-#surprise{display:none;color:#f8d994;font-size:20px}
-canvas{position:fixed;inset:0;pointer-events:none;z-index:5}
-@media(max-width:420px){
-  .gallery img{height:160px}
-  .gallery img:first-child{height:210px}
-}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#090014}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 20% 15%,#54106f 0,transparent 35%),radial-gradient(ellipse at 85% 25%,#1d236d 0,transparent 35%),radial-gradient(ellipse at 50% 100%,#510c43 0,transparent 45%),#090014}
+#stars,.sparkle-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;box-shadow:0 0 9px 2px #e8b8ff;animation:twinkle var(--d) ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.15;transform:scale(.6)}to{opacity:1;transform:scale(1.7)}}
+.laser{position:fixed;top:-20%;height:140%;width:2px;opacity:.45;filter:blur(1px);pointer-events:none;z-index:-1;transform-origin:top;animation:laser 7s ease-in-out infinite alternate}
+.laser.one{left:10%;background:linear-gradient(transparent,#ff4fc8,transparent);transform:rotate(18deg)}
+.laser.two{right:13%;background:linear-gradient(transparent,#78f7ff,transparent);transform:rotate(-20deg);animation-delay:-3s}
+@keyframes laser{from{opacity:.1;transform:rotate(-25deg) scaleY(.7)}to{opacity:.65;transform:rotate(25deg) scaleY(1.1)}}
+main{width:min(940px,100%);margin:auto;padding:24px 16px 70px;text-align:center}
+.badge{display:inline-block;margin:8px auto 16px;padding:8px 15px;border:1px solid #ffffff36;border-radius:999px;background:#ffffff0c;backdrop-filter:blur(10px);color:#ffe2ff;letter-spacing:2px;font-size:11px;text-transform:uppercase;box-shadow:0 0 25px #e53cff25}
+h1{font-size:clamp(2rem,8vw,4.8rem);line-height:1.08;margin:8px 0 12px;font-weight:900;letter-spacing:-1.5px;background:linear-gradient(100deg,#fff 5%,#ffc4f0 30%,#caa7ff 60%,#fff0b5 85%);background-size:250% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:250% center}}
+.subtitle{color:#e9d5ff;font-size:clamp(1rem,3.5vw,1.25rem);margin:0 0 25px}
+.glass{border:1px solid #ffffff26;background:linear-gradient(135deg,#ffffff13,#ffffff05);box-shadow:0 15px 60px #0006,inset 0 0 30px #ffffff05;backdrop-filter:blur(14px);border-radius:25px}
+.hero{padding:26px 18px 28px;position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:-2px;border-radius:27px;padding:2px;background:linear-gradient(120deg,#ff4fc8,#8b5cf6,#78f7ff,#ffe8a3,#ff4fc8);background-size:300% 300%;animation:borderglow 7s linear infinite;z-index:-1;opacity:.8}
+.hero:after{content:"";position:absolute;inset:1px;border-radius:24px;background:#120821;z-index:-1}
+@keyframes borderglow{to{background-position:300% 0}}
+.big-heart{font-size:clamp(2.5rem,10vw,5rem);display:block;filter:drop-shadow(0 0 20px #ff4fc8);animation:heartbeat 1.5s ease-in-out infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.16)}24%{transform:scale(1)}36%{transform:scale(1.1)}}
+button{border:0;color:#19051f;font-weight:900;font-size:1rem;letter-spacing:.2px;border-radius:999px;padding:15px 23px;background:linear-gradient(100deg,#ffe8a3,#ff8edb,#c4a7ff);box-shadow:0 0 18px #ff4fc875,0 0 45px #a855f744;cursor:pointer;transition:transform .2s,filter .2s}
+button:active{transform:scale(.96)}
+button:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.hint{font-size:.8rem;color:#cbb7df;margin-top:12px}
+.section{margin-top:28px;padding:24px 18px}
+h2{font-size:clamp(1.45rem,5vw,2.2rem);margin:0 0 15px;color:#ffe3fa}
+.photo-frame{max-width:420px;margin:18px auto 0;padding:8px;border-radius:22px;background:linear-gradient(135deg,#ff4fc8,#ffe8a3,#78f7ff,#a855f7);box-shadow:0 0 30px #b34bff45}
+.photo-frame img{display:block;width:100%;max-height:520px;object-fit:contain;border-radius:16px;background:#130a20}
+.caption{color:#d9c6e8;font-size:.9rem;margin-top:12px}
+.message{font-size:clamp(1rem,3.7vw,1.25rem);line-height:1.9;color:#fff0ff}
+.signature{color:#ffe8a3;font-weight:800;margin-top:18px}
+.gift-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:18px 0}
+.gift{font-size:2.7rem;filter:drop-shadow(0 0 12px #ff4fc8);animation:bob 2.5s ease-in-out infinite}
+.gift:nth-child(2){animation-delay:.3s}.gift:nth-child(3){animation-delay:.6s}.gift:nth-child(4){animation-delay:.9s}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(4deg)}}
+footer{padding:30px 10px 0;color:#bca8ce;font-size:.85rem}
+#surprise{position:fixed;inset:0;z-index:20;display:none;align-items:center;justify-content:center;text-align:center;padding:20px;background:radial-gradient(circle at center,#4c1768ed,#090014f7 70%);overflow:hidden}
+#surprise.show{display:flex;animation:fadein .6s ease}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.surprise-card{position:relative;z-index:2;width:min(650px,100%);padding:25px 14px}
+.surprise-name{font-size:clamp(2.8rem,12vw,6.4rem);font-weight:1000;line-height:1;background:linear-gradient(90deg,#fff,#ffb8ec,#ffe8a3,#bda7ff,#fff);background-size:300% auto;color:transparent;background-clip:text;-webkit-background-clip:text;filter:drop-shadow(0 0 24px #ff4fc8);animation:shine 3s linear infinite, namepop 1s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes namepop{from{opacity:0;transform:scale(.2) rotate(-12deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+.surprise-line{font-size:clamp(1.1rem,4vw,1.7rem);margin:20px 0;color:#fff0ff;animation:up .8s .3s both}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.cake{font-size:clamp(5rem,24vw,10rem);display:block;filter:drop-shadow(0 0 30px #ff7bda);animation:cakepop 1s .5s cubic-bezier(.2,1.6,.4,1) both,cakeglow 1.8s 1.5s infinite alternate}
+@keyframes cakepop{from{opacity:0;transform:translateY(100px) scale(.3)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes cakeglow{to{filter:drop-shadow(0 0 50px #ffe8a3)}}
+.flowers{font-size:clamp(2rem,9vw,4rem);margin:10px 0;animation:up .8s .7s both}
+.close-btn{margin-top:20px;background:linear-gradient(100deg,#fff,#e9c4ff);box-shadow:0 0 25px #c084fc88}
+.floaty{position:fixed;bottom:-100px;z-index:1;pointer-events:none;animation:floatup var(--time) linear forwards;font-size:var(--size)}
+@keyframes floatup{0%{transform:translateY(0) rotate(0) scale(.6);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-120vh) rotate(360deg) scale(1.2);opacity:0}}
+.confetti{position:fixed;top:-20px;width:8px;height:14px;z-index:30;pointer-events:none;animation:confettiFall var(--fall) linear forwards}
+@keyframes confettiFall{to{transform:translate3d(var(--drift),110vh,0) rotate(900deg);opacity:.8}}
+.hidden{display:none!important}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<div id="stars"></div>
-<canvas id="confetti"></canvas>
-
+<div id="stars"></div><div class="laser one"></div><div class="laser two"></div>
 <main>
-  <header class="hero">
-    <div class="small">A LITTLE MAGIC • A LOT OF LOVE</div>
-    <h1>𝐇𝐚𝐩𝐩𝐢𝐞𝐬𝐭 𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 𝐃𝐞𝐚𝐫<br>𝐒𝐚𝐧𝐢𝐤𝐚🎂❤️</h1>
-    <p>Today, the world celebrates someone truly special.</p>
-    <button onclick="celebrate()">✨ Start the celebration</button>
-    <p style="font-size:12px">SCROLL DOWN FOR YOUR SURPRISE ↓</p>
-  </header>
-
-  <section>
-    <div class="small">A MESSAGE FROM THE HEART</div>
-    <h2>To My Best Friend ❤️</h2>
-    <div class="card">
-      <p>
-        Dear Sanika,<br><br>
-        Happy Birthday to one of the most special people
-        in my life! 🥹❤️
-        <br><br>
-        Thank you for being a part of my journey,
-        for the memories, the laughter, and all those
-        little moments that mean so much.
-        <br><br>
-        May your new year bring you endless happiness,
-        beautiful memories, success, and everything
-        your heart wishes for.
-        <br><br>
-        Never stop smiling, keep shining, and always
-        remember how special you are.
-        <br><br>
-        <strong>Happy Birthday once again, Sanika! 🎂✨</strong>
-      </p>
-    </div>
+  <div class="badge">✦ a little universe made for you ✦</div>
+  <h1>𝐇𝐚𝐩𝐩𝐢𝐞𝐬𝐭 𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲<br>Dear Sanika 🎂❤️</h1>
+  <p class="subtitle">A Day As Special As You, Sanika 💜🎂</p>
+  <section class="hero glass">
+    <span class="big-heart">💜</span>
+    <h2>Your special day deserves a little magic ✨</h2>
+    <p style="color:#d9c6e8;line-height:1.7">A whole sky full of stars, a million little lights, and one very special person to celebrate.</p>
+    <button id="openSurprise">🎁 Open Your Birthday Surprise ✨</button>
+    <div class="hint">Tap the button and let the magic begin 💫</div>
   </section>
 
-  <section>
-    <div class="small">OUR SPECIAL MOMENTS</div>
-    <h2>Memories 📸</h2>
-    <p>Every picture has a story. Every memory is a treasure.</p>
-    <div class="gallery">
-      <!-- Replace these image URLs with your own photos -->
-      <img src="file_000000007c8881fa9c2d71e7238806e7.png" alt="My Favourite Photo of You 💜">
-      <img src="file_000000002fd8720697efc0038950dffa.png" alt="❤️🎀">
-      <img src="file_00000000d6687206aecbe4e2bcfd32cc.png" alt="Birthday cake">
+  <section class="section glass">
+    <h2>📸 A little memory, a lot of love</h2>
+    <div class="photo-frame">
+      <img src="file_000000007c8881fa9c2d71e7238806e7.png" alt="A special memory of Sanika" onerror="this.parentElement.classList.add('hidden')">
     </div>
-    <p style="font-size:12px">🇸‌🇦‌🇳‌🇮‌🇰‌🇦‌ 🇯‌🇮‌</p>
+    <p class="caption">Some memories become little pieces of forever 💖</p>
   </section>
 
-  <section>
-    <div class="small">ONE LAST THING...</div>
-    <h2>A Little Surprise 🎁</h2>
-    <p>Sanika, tap below. There's something more for you.</p>
-    <button onclick="reveal()">Open your surprise 💌</button>
-    <div class="card" id="surprise">
-      <p>
-        No matter how busy life gets, I hope we always
-        keep making beautiful memories together. 🫶
-        <br><br>
-        You're not just a friend; you're a beautiful
-        part of my story.
-        <br><br>
-        <strong>Stay happy. Stay blessed. Keep shining! ❤️</strong>
-      </p>
-    </div>
+  <section class="section glass">
+    <div class="gift-row"><span class="gift">🎈</span><span class="gift">🌹</span><span class="gift">🎂</span><span class="gift">🎁</span></div>
+    <h2>A birthday wish, just for you 💌</h2>
+    <p class="message">💜 Happy Birthday, Sanika! 🎂 On your special day, I wish you endless happiness, genuine love, beautiful memories, and all the success your heart dreams of. 💖✨</p>
+    <div class="signature">Keep shining, birthday star 🌟</div>
   </section>
-
-  <footer>Made with ❤️ especially for Sanika · Happy Birthday!</footer>
+  <footer>Made with 💜, just for Sanika · May your year sparkle ✨</footer>
 </main>
 
+<div id="surprise" role="dialog" aria-modal="true" aria-label="Birthday surprise">
+  <div class="surprise-card">
+    <div style="font-size:1rem;letter-spacing:4px;color:#ffe8a3;margin-bottom:20px">✨ TONIGHT, THE STARS SHINE FOR YOU ✨</div>
+    <div class="surprise-name">SANIKA!</div>
+    <div class="surprise-line">Happy Birthday, Beautiful Soul 💜</div>
+    <span class="cake">🎂</span>
+    <div class="flowers">💐 🌹 💖 🌷</div>
+    <p style="font-size:1.05rem;line-height:1.7;color:#f5dcff">May every candle bring a dream closer,<br>every flower bring a smile,<br>and every day remind you how special you are. ✨</p>
+    <button class="close-btn" id="closeSurprise">💖 Keep the magic going</button>
+  </div>
+</div>
+<audio id="birthdayMusic" loop preload="none">
+  <source src="birthday-music.mp3" type="audio/mpeg">
+</audio>
 <script>
-// Floating golden stars
-const stars=document.getElementById("stars");
-for(let i=0;i<32;i++){
-  const s=document.createElement("span");
-  s.className="star";
-  s.textContent=Math.random()>.5?"🌸🌺":"·";
-  s.style.left=Math.random()*100+"%";
-  s.style.fontSize=(10+Math.random()*18)+"px";
-  s.style.animationDuration=(7+Math.random()*12)+"s";
-  s.style.animationDelay=(-Math.random()*15)+"s";
-  stars.appendChild(s);
-}
-
-// Surprise message
-function reveal(){
-  const box=document.getElementById("surprise");
-  box.style.display="block";
-  celebrate();
-  box.scrollIntoView({behavior:"smooth",block:"center"});
-}
-
-// Gold confetti celebration
-const canvas=document.getElementById("confetti");
-const ctx=canvas.getContext("2d");
-let pieces=[];
-function resize(){
-  canvas.width=window.innerWidth;
-  canvas.height=window.innerHeight;
-}
-window.addEventListener("resize",resize);
-resize();
-
-function celebrate(){
-  for(let i=0;i<140;i++){
-    pieces.push({
-      x:Math.random()*canvas.width,
-      y:-20-Math.random()*canvas.height*.5,
-      size:3+Math.random()*5,
-      speed:2+Math.random()*4,
-      drift:Math.random()*2-1,
-      angle:Math.random()*6
-    });
-  }
-}
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  pieces.forEach(p=>{
-    p.y+=p.speed;p.x+=p.drift;p.angle+=.04;
-    ctx.save();
-    ctx.translate(p.x,p.y);
-    ctx.rotate(p.angle);
-    ctx.fillStyle=Math.random()>.4?"#edc66f":"#fff0bd";
-    ctx.fillRect(0,0,p.size,p.size*1.6);
-    ctx.restore();
-  });
-  pieces=pieces.filter(p=>p.y<canvas.height+20);
-  requestAnimationFrame(animate);
-}
-animate();
+const stars=document.getElementById('stars');
+for(let i=0;i<100;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.setProperty('--d',(1+Math.random()*3)+'s');s.style.animationDelay=(-Math.random()*4)+'s';stars.appendChild(s)}
+const surprise=document.getElementById('surprise');
+const music=document.getElementById('birthdayMusic');
+let floatTimer;
+function confettiBurst(amount=150){const colors=['#ff4fc8','#ffe8a3','#78f7ff','#a855f7','#ffffff','#ff7b7b'];for(let i=0;i<amount;i++){const c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'%';c.style.background=colors[Math.floor(Math.random()*colors.length)];c.style.borderRadius=Math.random()>.5?'50%':'2px';c.style.setProperty('--fall',(2.5+Math.random()*4)+'s');c.style.setProperty('--drift',((Math.random()-.5)*220)+'px');c.style.animationDelay=(Math.random()*1.4)+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),8000)}}
+function floatMagic(){const symbols=['🎈','💖','✨','🌸','🌹','💜','⭐','🎊'];const f=document.createElement('div');f.className='floaty';f.textContent=symbols[Math.floor(Math.random()*symbols.length)];f.style.left=Math.random()*95+'%';f.style.setProperty('--time',(5+Math.random()*5)+'s');f.style.setProperty('--size',(20+Math.random()*28)+'px');document.body.appendChild(f);setTimeout(()=>f.remove(),10500)}
+document.getElementById('openSurprise').addEventListener('click',()=>{surprise.classList.add('show');confettiBurst(190);for(let i=0;i<30;i++)setTimeout(floatMagic,i*100);floatTimer=setInterval(floatMagic,450);music.volume=.35;music.play().catch(()=>{});setTimeout(()=>confettiBurst(80),1800)});
+document.getElementById('closeSurprise').addEventListener('click',()=>{surprise.classList.remove('show');clearInterval(floatTimer);music.pause()});
+surprise.addEventListener('click',e=>{if(e.target===surprise){surprise.classList.remove('show');clearInterval(floatTimer);music.pause()}});
 </script>
-  
-<section style="text-align:center; padding:30px 15px;">
-  <h2>My Favourite Photo of You 💜</h2>
-  <img
-    src="file_000000007c8881fa9c2d71e7238806e7.png"
-    alt="Sanika in her beautiful saree"
-    style="width:100%; max-width:600px; height:auto;
-    object-fit:contain; display:block; margin:auto;
-    border-radius:18px;"
-  >
-</section>
 </body>
 </html>
