@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sanika ✨</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;color:#fff5dc;
+  background:#090909;
+  font-family:Georgia,serif;
+  text-align:center;overflow-x:hidden
+}
+#stars{
+  position:fixed;inset:0;pointer-events:none;
+  z-index:0;overflow:hidden
+}
+.star{
+  position:absolute;color:#e8bd69;
+  animation:float linear infinite;
+  opacity:.7
+}
+@keyframes float{
+  from{transform:translateY(105vh) rotate(0deg)}
+  to{transform:translateY(-15vh) rotate(360deg)}
+}
+main{position:relative;z-index:1}
+.hero{
+  min-height:95vh;display:flex;
+  flex-direction:column;justify-content:center;
+  align-items:center;padding:35px 20px;
+  background:radial-gradient(ellipse at center,
+  #352512 0%,#14100b 42%,#090909 78%)
+}
+.small{
+  color:#d8b56b;letter-spacing:4px;
+  font:12px Arial,sans-serif
+}
+h1{
+  font-size:clamp(42px,12vw,76px);
+  margin:22px 0;color:#f7d995;
+  text-shadow:0 0 25px #bb873f66
+}
+h2{color:#edcc84;font-size:30px}
+p{line-height:1.8;color:#e0d5c0}
+button{
+  padding:14px 23px;border:1px solid #e8c77c;
+  border-radius:30px;background:#c69b4b;
+  color:#100d07;font-weight:bold;
+  font-size:14px;cursor:pointer;margin:10px
+}
+button:hover{background:#ffe5a2}
+section{padding:65px 18px;max-width:900px;margin:auto}
+.card{
+  border:1px solid #8f713c;
+  background:#ffffff08;border-radius:18px;
+  padding:25px;margin:20px auto;
+  max-width:650px
+}
+.gallery{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:12px;margin-top:25px
+}
+.gallery img{
+  width:100%;height:210px;object-fit:cover;
+  border-radius:12px;border:1px solid #98763e
+}
+.gallery img:first-child{grid-column:span 2;height:270px}
+footer{padding:30px;color:#b9a987;font-size:13px}
+#surprise{display:none;color:#f8d994;font-size:20px}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:5}
+@media(max-width:420px){
+  .gallery img{height:160px}
+  .gallery img:first-child{height:210px}
+}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<canvas id="confetti"></canvas>
+
+<main>
+  <header class="hero">
+    <div class="small">A LITTLE MAGIC • A LOT OF LOVE</div>
+    <h1>Happy Birthday<br>Sanika ✨</h1>
+    <p>Today, the world celebrates someone truly special.</p>
+    <button onclick="celebrate()">✨ Start the celebration</button>
+    <p style="font-size:12px">SCROLL DOWN FOR YOUR SURPRISE ↓</p>
+  </header>
+
+  <section>
+    <div class="small">A MESSAGE FROM THE HEART</div>
+    <h2>To My Best Friend ❤️</h2>
+    <div class="card">
+      <p>
+        Dear Sanika,<br><br>
+        Happy Birthday to one of the most special people
+        in my life! 🥹❤️
+        <br><br>
+        Thank you for being a part of my journey,
+        for the memories, the laughter, and all those
+        little moments that mean so much.
+        <br><br>
+        May your new year bring you endless happiness,
+        beautiful memories, success, and everything
+        your heart wishes for.
+        <br><br>
+        Never stop smiling, keep shining, and always
+        remember how special you are.
+        <br><br>
+        <strong>Happy Birthday once again, Sanika! 🎂✨</strong>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="small">OUR SPECIAL MOMENTS</div>
+    <h2>Memories 📸</h2>
+    <p>Every picture has a story. Every memory is a treasure.</p>
+    <div class="gallery">
+      <!-- Replace these image URLs with your own photos -->
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80" alt="Birthday celebration">
+      <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=600&q=80" alt="Friends making memories">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Birthday cake">
+    </div>
+    <p style="font-size:12px">Replace the sample pictures with your favorite photos together.</p>
+  </section>
+
+  <section>
+    <div class="small">ONE LAST THING...</div>
+    <h2>A Little Surprise 🎁</h2>
+    <p>Sanika, tap below. There's something more for you.</p>
+    <button onclick="reveal()">Open your surprise 💌</button>
+    <div class="card" id="surprise">
+      <p>
+        No matter how busy life gets, I hope we always
+        keep making beautiful memories together. 🫶
+        <br><br>
+        You're not just a friend; you're a beautiful
+        part of my story.
+        <br><br>
+        <strong>Stay happy. Stay blessed. Keep shining! ❤️</strong>
+      </p>
+    </div>
+  </section>
+
+  <footer>Made with ❤️ especially for Sanika · Happy Birthday!</footer>
+</main>
+
+<script>
+// Floating golden stars
+const stars=document.getElementById("stars");
+for(let i=0;i<32;i++){
+  const s=document.createElement("span");
+  s.className="star";
+  s.textContent=Math.random()>.5?"✦":"·";
+  s.style.left=Math.random()*100+"%";
+  s.style.fontSize=(10+Math.random()*18)+"px";
+  s.style.animationDuration=(7+Math.random()*12)+"s";
+  s.style.animationDelay=(-Math.random()*15)+"s";
+  stars.appendChild(s);
+}
+
+// Surprise message
+function reveal(){
+  const box=document.getElementById("surprise");
+  box.style.display="block";
+  celebrate();
+  box.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+// Gold confetti celebration
+const canvas=document.getElementById("confetti");
+const ctx=canvas.getContext("2d");
+let pieces=[];
+function resize(){
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+}
+window.addEventListener("resize",resize);
+resize();
+
+function celebrate(){
+  for(let i=0;i<140;i++){
+    pieces.push({
+      x:Math.random()*canvas.width,
+      y:-20-Math.random()*canvas.height*.5,
+      size:3+Math.random()*5,
+      speed:2+Math.random()*4,
+      drift:Math.random()*2-1,
+      angle:Math.random()*6
+    });
+  }
+}
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  pieces.forEach(p=>{
+    p.y+=p.speed;p.x+=p.drift;p.angle+=.04;
+    ctx.save();
+    ctx.translate(p.x,p.y);
+    ctx.rotate(p.angle);
+    ctx.fillStyle=Math.random()>.4?"#edc66f":"#fff0bd";
+    ctx.fillRect(0,0,p.size,p.size*1.6);
+    ctx.restore();
+  });
+  pieces=pieces.filter(p=>p.y<canvas.height+20);
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+</body>
+</html>
